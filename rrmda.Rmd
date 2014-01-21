@@ -75,3 +75,7 @@ This is how to cite in knitr with knitrcitations `r citep(bib["bentall_technique
 Material and methods
 ------------
 This is the first table __Table__ 1.
+
+
+
+
