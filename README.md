@@ -1,4 +1,4 @@
-rrmda
+Reproducible Rmarkdown article example
 =====
 
-Reproducible rmarkdown article example
+With growing number of publications and randomized control trials (RCT) it becomes an issue to have reproducable research. Here I will try to share my vision on Rmarkdonw files with form of example. 
