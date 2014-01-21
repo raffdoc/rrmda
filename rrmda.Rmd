@@ -1,17 +1,64 @@
+
+```{r setup, cache = F, echo = F, message = F,include=F,results='hide', warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+opts_chunk$set(message = T, error = T, warning = T, comment = NA, fig.align = 'center', dev="CairoPNG",
+  		   dpi = 72, tidy = F, cache = F,echo=T,include=F, cache.path = '.cache/',
+			   fig.path = 'fig/',fig.height=5,fig.width=10, par(pch=19))
+
+options(xtable.type = 'html', width=68,digits=1, show.signif.stars=FALSE)
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+library(knitr); library(knitcitations)
+bib <- read.bibtex("td_ref.bib")
+cite_options(tooltip = FALSE, linked = TRUE,
+    numerical = TRUE, bibtex_data = FALSE)
+#
+#Reading in your own bib file:
+#bib <- read.bibtex(file.path(getwd(), "Presentation", basename(getOption("bib.loc"))))
+#cite in text using `r citet(bib[1])`
+```
+
+```{r mainLibr}
+
+library(Hmisc)
+library(reshape)
+library(survival)
+require(openintro)
+library(car)
+library(psych)
+library(ggplot2)
+library(lattice)
+require(mosaic)
+require(xtable)
+library(RColorBrewer)
+trellis.par.set(theme=col.mosaic())  # get a better color scheme for lattice
+source("~/Dropbox/R_Scripts/glob_r_scr/print_pval.R")
+source("~/Dropbox/R_Scripts/glob_r_scr/median_range.R")
+
+```
+
+
+```{r loadData}
+
+```
+
 This is a Reproducable researche Rmarkdow example.
 ========================================================
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).
 
-When you click the **Knit HTML** button a web page will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r}
-summary(cars)
-```
+**Abstract**
 
-You can also embed plots, for example:
 
-```{r fig.width=7, fig.height=6}
-plot(cars)
-```
+__Objective__
+__Methods__
+__Results__
+__Conlutions__
+
 
