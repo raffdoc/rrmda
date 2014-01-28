@@ -63,8 +63,23 @@ abline(v=median(outcome[,23],na.rm=TRUE),col="blue")
 abline(h=0)
 ```
 
-<div class="rimage center"><img src="fig/plot3.png" title="A histogram and density estimates for three outcomes." alt="A histogram and density estimates for three outcomes." class="plot" /></div>
+<div class="rimage center"><img src="fig/plot1.png" title="A histogram and density estimates for three outcomes." alt="A histogram and density estimates for three outcomes." class="plot" /></div>
 
 
 As you can deduce from the Figure 1.
 
+
+```r
+outcome2 <- outcome[!(outcome$State %in% names(table(outcome$State)[table(outcome$State)<20])),]
+death <- outcome2[, 11]
+state <- outcome2$State
+par(las=2,cex.axis=0.8)
+state.median<-reorder(state,death, na.rm=T,median)
+boxplot(death ~ state.median,ylab="30-day Death Rate",main="Heart Attack 30-day Death Rate by State")
+```
+
+<div class="rimage center"><img src="fig/plot2.png" title="A boxplot of median moratlity accross the regeons." alt="A boxplot of median moratlity accross the regeons." class="plot" /></div>
+
+
+
+There is other image here Figure 1

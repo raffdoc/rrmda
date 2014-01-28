@@ -169,7 +169,7 @@ This is the first table __Table__ 1.
 
 
 
-```{r plot3, fig.height=3, fig.width=9,fig.keep='high',include=TRUE, fig.cap="A histogram and density estimates for three outcomes."}
+```{r plot1, fig.height=3, fig.width=9,fig.keep='high',include=TRUE, fig.cap="A histogram and density estimates for three outcomes."}
 par(mfrow=c(1,3))
 hist(outcome[,11],xlab="30-day Death Rate",main=substitute(bar(X)==k,list(k=mean(outcome[,11],na.rm=TRUE))),xlim=c(0,20),prob=TRUE)
 lines(density(outcome[,11],na.rm=TRUE),col="red")             # add a density estimate with defaults
@@ -187,3 +187,14 @@ abline(h=0)
 
 As you can deduce from the Figure `r getNextFigureNo()`.
 
+```{r plot2, fig.height=3, fig.width=5,fig.keep='high',include=TRUE, fig.cap="A boxplot of median moratlity accross the regeons."}
+outcome2 <- outcome[!(outcome$State %in% names(table(outcome$State)[table(outcome$State)<20])),]
+death <- outcome2[, 11]
+state <- outcome2$State
+par(las=2,cex.axis=0.8)
+state.median<-reorder(state,death, na.rm=T,median)
+boxplot(death ~ state.median,ylab="30-day Death Rate",main="Heart Attack 30-day Death Rate by State")
+```
+
+
+There is other image here Figure `r getNextFigureNo()`
