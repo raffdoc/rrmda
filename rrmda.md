@@ -48,16 +48,21 @@ This is the first table __Table__ 1.
 
 
 ```r
+cols <- brewer.pal(9,"Blues")
+pal <- colorRampPalette(cols)
 par(mfrow=c(1,3))
-hist(outcome[,11],xlab="30-day Death Rate",main=substitute(bar(X)==k,list(k=mean(outcome[,11],na.rm=TRUE))),xlim=c(0,20),prob=TRUE)
+hist(outcome[,11],xlab="30-day Death Rate",
+     main=substitute(bar(X)==k,list(k=mean(outcome[,11],na.rm=TRUE))),xlim=c(0,20),prob=TRUE,col=pal(20))
 lines(density(outcome[,11],na.rm=TRUE),col="red")             # add a density estimate with defaults
 abline(v=median(outcome[,11],na.rm=TRUE),col="blue")
 abline(h=0)
-hist(outcome[,17],xlab="30-day Death Rate",main=substitute(bar(X)==k,list(k=mean(outcome[,17],na.rm=TRUE))),xlim=c(0,20),prob=TRUE)
+hist(outcome[,17],xlab="30-day Death Rate",
+     main=substitute(bar(X)==k,list(k=mean(outcome[,17],na.rm=TRUE))),xlim=c(0,20),prob=TRUE,col=pal(20))
 lines(density(outcome[,17],na.rm=TRUE),col="red") 
 abline(v=median(outcome[,17],na.rm=TRUE),col="blue")
 abline(h=0)
-hist(outcome[,23],xlab="30-day Death Rate",main=substitute(bar(X)==k,list(k=mean(outcome[,23],na.rm=TRUE))),xlim=c(0,20),prob=TRUE)
+hist(outcome[,23],xlab="30-day Death Rate",
+     main=substitute(bar(X)==k,list(k=mean(outcome[,23],na.rm=TRUE))),xlim=c(0,20),prob=TRUE,col=pal(20))
 lines(density(outcome[,23],na.rm=TRUE),col="red") 
 abline(v=median(outcome[,23],na.rm=TRUE),col="blue")
 abline(h=0)
@@ -80,11 +85,7 @@ state.median<-reorder(state,death, na.rm=T,median)
 boxplot(death ~ state.median,ylab="30-day Death Rate",main="Heart Attack 30-day Death Rate by State",xaxt="n")
 labs <- paste0(names(table(state.median)),"(",as.numeric(table(state.median)),")")
 axis(side=1,at=1:length(levels(state.median)),lab=FALSE)
-<<<<<<< HEAD
 text(1:length(levels(state.median)),par("usr")[3] - 1.5,srt=90, labels=labs, xpd=T, cex=0.7)
-=======
-text(1:length(levels(state.median)),par("usr")[3] - 1,srt=90, labels=labs, xpd=T, cex=0.7)
->>>>>>> da99876e0170f996b6eaef2bd75b11f5d5b1bf09
 ```
 
 <div class="rimage center"><img src="fig/plot2.png" title="A boxplot of median moratlity accross the regeons." alt="A boxplot of median moratlity accross the regeons." class="plot" /></div>
