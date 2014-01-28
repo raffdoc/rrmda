@@ -66,5 +66,5 @@ abline(h=0)
 <div class="rimage center"><img src="fig/plot3.png" title="A histogram and density estimates for three outcomes." alt="A histogram and density estimates for three outcomes." class="plot" /></div>
 
 
-
+As you can deduce from the Figure 1.
 
