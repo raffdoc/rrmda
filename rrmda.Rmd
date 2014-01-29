@@ -143,7 +143,8 @@ This is a Reproducable researche Rmarkdow example: Mortalty in USA Hospitals
 
 
 __Objective__
-Create a reproducable research article with Rmarkdown. I will be using data from [Medicare](http://hospitalcompare.hhs.gov)
+Create a reproducable research article with Rmarkdown. I will be using data from [Medicare](http://hospitalcompare.hhs.gov).
+I will be using Knitr `r citep(bib["knitr_man"])` for Rmarkdown compilation.
 
 __Methods__
 
