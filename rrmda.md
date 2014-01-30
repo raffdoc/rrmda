@@ -83,7 +83,7 @@ abline(v=median(outcome[,23],na.rm=TRUE),col="blue")
 abline(h=0)
 ```
 
-<figure><img src='fig/plot1.png'  style='display: block; margin: auto;'><figcaption>Figure 1: A histogram and density estimates for three outcomes.</figcaption></figure>
+<figure><img src='fig/plot1.svg'  style='display: block; margin: auto;'><figcaption>Figure 1: A histogram and density estimates for three outcomes.</figcaption></figure>
 
 
 As you can deduce from the Figure 2.
@@ -103,7 +103,7 @@ axis(side=1,at=1:length(levels(state.median)),lab=FALSE)
 text(1:length(levels(state.median)),par("usr")[3] - 1.5,srt=90, labels=labs, xpd=T, cex=0.7)
 ```
 
-<figure><img src='fig/plot2.png'  style='display: block; margin: auto;'><figcaption>Figure 2: A boxplot of median moratlity accross the regeons.</figcaption></figure>
+<figure><img src='fig/plot2.svg'  style='display: block; margin: auto;'><figcaption>Figure 2: A boxplot of median moratlity accross the regeons.</figcaption></figure>
 
 
 There is previous image here Figure 2.
@@ -121,7 +121,7 @@ xlab="Number of Patients Seen",ylab="30-day Death Rate",
 main="Heart Attack 30-day Death Rate by Ownership")
 ```
 
-<figure><img src='fig/plot3.png'  style='display: block; margin: auto;'><figcaption>Figure 3: A scatterplot of death rate by number of the patients and hospital owner.</figcaption></figure>
+<figure><img src='fig/plot3.svg'  style='display: block; margin: auto;'><figcaption>Figure 3: A scatterplot of death rate by number of the patients and hospital owner.</figcaption></figure>
 
 
 
