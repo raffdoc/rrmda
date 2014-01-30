@@ -223,7 +223,22 @@ axis(side=1,at=1:length(levels(state.median)),lab=FALSE)
 text(1:length(levels(state.median)),par("usr")[3] - 1.5,srt=90, labels=labs, xpd=T, cex=0.7)
 ```
 
-There is other image here Figure `r getPrevFigureNo()`.
+There is previous image here Figure `r getPrevFigureNo()`.
+
+
+And yet another image Figure `r getNextFigureNo()`.
+```{r plot3, fig.height=6, fig.width=12,include=TRUE, fig.cap="A scatterplot of death rate by number of the patients and hospital owner."}
+xyplot(death~npatient|owner,
+panel=function(x,y,...){
+  panel.xyplot(x,y,...)
+	panel.lmline(x,y,...)
+},
+xlab="Number of Patients Seen",ylab="30-day Death Rate",
+main="Heart Attack 30-day Death Rate by Ownership")
+```
+
+
+
 
 Discussion
 ------------
@@ -232,7 +247,7 @@ Discussion
 
 
 
-Supplimentary data
+Supplimentary files
 ------------
 Data files and codebooe are avalable [here](https://dl.dropboxusercontent.com/u/530192/public_data/DataMedicareMeasuresHospitals.zip).
 

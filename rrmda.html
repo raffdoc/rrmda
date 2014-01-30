@@ -254,11 +254,24 @@ text(1:length(levels(state.median)),par(&quot;usr&quot;)[3] - 1.5,srt=90, labels
 
 <figure><img src='fig/plot2.png'  style='display: block; margin: auto;'><figcaption>Figure 2: A boxplot of median moratlity accross the regeons.</figcaption></figure>
 
-<p>There is other image here Figure 2.</p>
+<p>There is previous image here Figure 2.</p>
+
+<p>And yet another image Figure 3.</p>
+
+<pre><code class="r">xyplot(death~npatient|owner,
+panel=function(x,y,...){
+  panel.xyplot(x,y,...)
+    panel.lmline(x,y,...)
+},
+xlab=&quot;Number of Patients Seen&quot;,ylab=&quot;30-day Death Rate&quot;,
+main=&quot;Heart Attack 30-day Death Rate by Ownership&quot;)
+</code></pre>
+
+<figure><img src='fig/plot3.png'  style='display: block; margin: auto;'><figcaption>Figure 3: A scatterplot of death rate by number of the patients and hospital owner.</figcaption></figure>
 
 <h2 style='margin: 10pt 0pt 0pt 0pt;'>Discussion</h2>
 
-<h2 style='margin: 10pt 0pt 0pt 0pt;'>Supplimentary data</h2>
+<h2 style='margin: 10pt 0pt 0pt 0pt;'>Supplimentary files</h2>
 
 <p>Data files and codebooe are avalable <a href="https://dl.dropboxusercontent.com/u/530192/public_data/DataMedicareMeasuresHospitals.zip">here</a>.</p>
 
