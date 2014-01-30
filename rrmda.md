@@ -71,10 +71,10 @@ abline(v=median(outcome[,23],na.rm=TRUE),col="blue")
 abline(h=0)
 ```
 
-<div class="rimage center"><img src="fig/plot1.png" title="A histogram and density estimates for three outcomes." alt="A histogram and density estimates for three outcomes." class="plot" /></div>
+<figure><img src='fig/plot1.png'  style='display: block; margin: auto;'><figcaption>Figure 1: A histogram and density estimates for three outcomes.</figcaption></figure>
 
 
-As you can deduce from the Figure 1.
+As you can deduce from the Figure 2.
 
 
 ```r
@@ -92,6 +92,6 @@ axis(side=1,at=1:length(levels(state.median)),lab=FALSE)
 text(1:length(levels(state.median)),par("usr")[3] - 1.5,srt=90, labels=labs, xpd=T, cex=0.7)
 ```
 
-<div class="rimage center"><img src="fig/plot2.png" title="A boxplot of median moratlity accross the regeons." alt="A boxplot of median moratlity accross the regeons." class="plot" /></div>
+<figure><img src='fig/plot2.png'  style='display: block; margin: auto;'><figcaption>Figure 2: A boxplot of median moratlity accross the regeons.</figcaption></figure>
 
-There is other image here Figure 0.
+There is other image here Figure 2.
