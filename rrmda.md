@@ -20,11 +20,14 @@ This is a Reproducable researche Rmarkdow example: Mortalty in USA Hospitals
 
 
 __Objective__
-Create a reproducable research article with Rmarkdown. I will be using data from [Medicare](http://hospitalcompare.hhs.gov).
-I will be using Knitr (<a href="http://yihui.name/knitr/">Andrew et al. 2013</a>) for Rmarkdown compilation.
+Create a reproducable research article with Rmarkdown and share it.  
 
 __Methods__
-
+I will be using data from [Medicare](http://hospitalcompare.hhs.gov) which contains two datasets
+1. This table provides general Hospital information in response to a Hospital Compare search.
+2. The Outcome of Care Measures nationwide (USA).
+The codebook is provided and will be avalable as supplimentary file. 
+I will be using Knitr (<a href="http://yihui.name/knitr/">Andrew et al. 2013</a>) for Rmarkdown compilation.
 
 __Results__
 
@@ -33,12 +36,17 @@ __Conlutions__
 
 Introduction
 ------------
-This is how to cite in knitr with knitrcitations (<a href="">Bentall & Bono, 1968</a>). 
 
 
 Material and methods
 ------------
 This is the first table __Table__ 1.
+
+
+
+
+Results
+------------
 See next Figure 1.
 
 
@@ -94,8 +102,20 @@ text(1:length(levels(state.median)),par("usr")[3] - 1.5,srt=90, labels=labs, xpd
 
 <figure><img src='fig/plot2.png'  style='display: block; margin: auto;'><figcaption>Figure 2: A boxplot of median moratlity accross the regeons.</figcaption></figure>
 
-<<<<<<< HEAD
+
 There is other image here Figure 2.
-=======
-There is other image here Figure 3
->>>>>>> 2b9d7e1eba6b8350a4e20640eae4debc7e800ec0
+
+Discussion
+------------
+
+
+
+
+
+Supplimentary data
+------------
+Data files and codebooe are avalable [here](https://dl.dropboxusercontent.com/u/530192/public_data/DataMedicareMeasuresHospitals.zip).
+
+
+
+
