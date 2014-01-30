@@ -39,7 +39,7 @@ This is how to cite in knitr with knitrcitations (<a href="">Bentall & Bono, 196
 Material and methods
 ------------
 This is the first table __Table__ 1.
-
+See next Figure 1.
 
 
 
@@ -78,6 +78,7 @@ As you can deduce from the Figure 1.
 
 
 ```r
+fig.cap2 <- paste("A boxplot of median moratlity accross the regeons.")
 outcome2 <- outcome[!(outcome$State %in% names(table(outcome$State)[table(outcome$State)<20])),]
 death <- outcome2[, 11]
 state <- outcome2$State
@@ -93,4 +94,4 @@ text(1:length(levels(state.median)),par("usr")[3] - 1.5,srt=90, labels=labs, xpd
 
 <div class="rimage center"><img src="fig/plot2.png" title="A boxplot of median moratlity accross the regeons." alt="A boxplot of median moratlity accross the regeons." class="plot" /></div>
 
-There is other image here Figure 1
+There is other image here Figure 0.

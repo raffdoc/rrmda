@@ -22,8 +22,10 @@ options(figure_counter = TRUE)
 # Use roman letters (I, II, III, etc) for figures
 #options(figure_counter_roman = TRUE)
 
-# Adding the figure number is a little tricky when the format is roman
+# Adding the next figure number
 getNextFigureNo <- function() as.character(as.numeric(options("figure_counter")))
+# Adding the previous figure number
+getPrevFigureNo <- function() as.character(as.numeric(options("figure_counter"))-1)
 
 # Add a figure counter function
 knit_hooks$set(plot = function(x, options) {
@@ -162,7 +164,7 @@ This is how to cite in knitr with knitrcitations `r citep(bib["bentall_technique
 Material and methods
 ------------
 This is the first table __Table__ 1.
-
+See next Figure `r getNextFigureNo()`.
 
 
 
@@ -195,7 +197,8 @@ abline(h=0)
 
 As you can deduce from the Figure `r getNextFigureNo()`.
 
-```{r plot2, fig.height=6, fig.width=7,include=TRUE, fig.cap="A boxplot of median moratlity accross the regeons."}
+```{r plot2, fig.height=6, fig.width=7,include=TRUE, fig.cap=fig.cap2}
+fig.cap2 <- paste("A boxplot of median moratlity accross the regeons.")
 outcome2 <- outcome[!(outcome$State %in% names(table(outcome$State)[table(outcome$State)<20])),]
 death <- outcome2[, 11]
 state <- outcome2$State
@@ -208,4 +211,4 @@ labs <- paste0(names(table(state.median)),"(",as.numeric(table(state.median)),")
 axis(side=1,at=1:length(levels(state.median)),lab=FALSE)
 text(1:length(levels(state.median)),par("usr")[3] - 1.5,srt=90, labels=labs, xpd=T, cex=0.7)
 ```
-There is other image here Figure `r getNextFigureNo()`
+There is other image here Figure `r getPrevFigureNo()`.
