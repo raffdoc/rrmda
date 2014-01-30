@@ -1,6 +1,6 @@
 ```{r setup, cache = F, echo = F, message = F,include=F,results='hide', warning = F, tidy = F}
 # make this an external chunk that can be included in any file
-opts_chunk$set(message = T, error = T, warning = T, comment = NA, fig.align = 'center', dev="CairoPNG",
+opts_chunk$set(message = T, error = T, warning = T, comment = NA, fig.align = 'center', dev=c("CairoPNG","CairoSVG"),
   		   dpi = 96, tidy = F, cache = F,echo=T,include=F, cache.path = '.cache/',
 			   fig.path = 'fig/',fig.height=5,fig.width=10, par(pch=19))
 
