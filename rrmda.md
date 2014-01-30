@@ -11,8 +11,7 @@
 
 
 
-
-This is a Reproducable researche Rmarkdow example.
+This is a Reproducable researche Rmarkdow example: Mortalty in USA Hospitals
 ========================================================
 
 
@@ -21,7 +20,8 @@ This is a Reproducable researche Rmarkdow example.
 
 
 __Objective__
-
+Create a reproducable research article with Rmarkdown. I will be using data from [Medicare](http://hospitalcompare.hhs.gov).
+I will be using Knitr (<a href="http://yihui.name/knitr/">Andrew et al. 2013</a>) for Rmarkdown compilation.
 
 __Methods__
 
@@ -94,4 +94,8 @@ text(1:length(levels(state.median)),par("usr")[3] - 1.5,srt=90, labels=labs, xpd
 
 <figure><img src='fig/plot2.png'  style='display: block; margin: auto;'><figcaption>Figure 2: A boxplot of median moratlity accross the regeons.</figcaption></figure>
 
+<<<<<<< HEAD
 There is other image here Figure 2.
+=======
+There is other image here Figure 3
+>>>>>>> 2b9d7e1eba6b8350a4e20640eae4debc7e800ec0
