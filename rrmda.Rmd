@@ -1,4 +1,3 @@
-
 ```{r setup, cache = F, echo = F, message = F,include=F,results='hide', warning = F, tidy = F}
 # make this an external chunk that can be included in any file
 opts_chunk$set(message = T, error = T, warning = T, comment = NA, fig.align = 'center', dev="CairoPNG",
@@ -137,7 +136,7 @@ source("code/data_prep.R")
 sessionInfo()
 ```
 
-This is a Reproducable researche Rmarkdow example.
+This is a Reproducable researche Rmarkdow example: Mortalty in USA Hospitals
 ========================================================
 
 
@@ -146,7 +145,8 @@ This is a Reproducable researche Rmarkdow example.
 
 
 __Objective__
-
+Create a reproducable research article with Rmarkdown. I will be using data from [Medicare](http://hospitalcompare.hhs.gov).
+I will be using Knitr `r citep(bib["knitr_man"])` for Rmarkdown compilation.
 
 __Methods__
 
@@ -211,4 +211,8 @@ labs <- paste0(names(table(state.median)),"(",as.numeric(table(state.median)),")
 axis(side=1,at=1:length(levels(state.median)),lab=FALSE)
 text(1:length(levels(state.median)),par("usr")[3] - 1.5,srt=90, labels=labs, xpd=T, cex=0.7)
 ```
+<<<<<<< HEAD
 There is other image here Figure `r getPrevFigureNo()`.
+=======
+There is other image here Figure `r getNextFigureNo()`
+>>>>>>> 2b9d7e1eba6b8350a4e20640eae4debc7e800ec0
