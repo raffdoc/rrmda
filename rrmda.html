@@ -188,10 +188,14 @@ hr {
 Create a reproducable research article with Rmarkdown and share it.  </p>
 
 <p><strong>Methods</strong>
-I will be using data from <a href="http://hospitalcompare.hhs.gov">Medicare</a> which contains two datasets
-1. This table provides general Hospital information in response to a Hospital Compare search.
-2. The Outcome of Care Measures nationwide (USA).
-The codebook is provided and will be avalable as supplimentary file. 
+I will be using data from <a href="http://hospitalcompare.hhs.gov">Medicare</a> which contains two datasets</p>
+
+<ol>
+<li>This table provides general Hospital information in response to a Hospital Compare search.</li>
+<li>The Outcome of Care Measures nationwide (USA).</li>
+</ol>
+
+<p>The codebook is provided and will be avalable as supplimentary file. 
 I will be using Knitr (<a href="http://yihui.name/knitr/">Andrew et al. 2013</a>) for Rmarkdown compilation.</p>
 
 <p><strong>Results</strong></p>
@@ -235,8 +239,7 @@ abline(h=0)
 
 <p>As you can deduce from the Figure 2.</p>
 
-<pre><code class="r">fig.cap2 &lt;- paste(&quot;A boxplot of median moratlity accross the regeons.&quot;)
-outcome2 &lt;- outcome[!(outcome$State %in% names(table(outcome$State)[table(outcome$State)&lt;20])),]
+<pre><code class="r">outcome2 &lt;- outcome[!(outcome$State %in% names(table(outcome$State)[table(outcome$State)&lt;20])),]
 death &lt;- outcome2[, 11]
 state &lt;- outcome2$State
 par(las=2,cex.axis=0.8)

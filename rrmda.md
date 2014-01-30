@@ -24,8 +24,12 @@ Create a reproducable research article with Rmarkdown and share it.
 
 __Methods__
 I will be using data from [Medicare](http://hospitalcompare.hhs.gov) which contains two datasets
+
+
 1. This table provides general Hospital information in response to a Hospital Compare search.
 2. The Outcome of Care Measures nationwide (USA).
+
+
 The codebook is provided and will be avalable as supplimentary file. 
 I will be using Knitr (<a href="http://yihui.name/knitr/">Andrew et al. 2013</a>) for Rmarkdown compilation.
 
@@ -86,7 +90,6 @@ As you can deduce from the Figure 2.
 
 
 ```r
-fig.cap2 <- paste("A boxplot of median moratlity accross the regeons.")
 outcome2 <- outcome[!(outcome$State %in% names(table(outcome$State)[table(outcome$State)<20])),]
 death <- outcome2[, 11]
 state <- outcome2$State
