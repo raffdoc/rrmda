@@ -145,11 +145,14 @@ This is a Reproducable researche Rmarkdow example: Mortalty in USA Hospitals
 
 
 __Objective__
-Create a reproducable research article with Rmarkdown. I will be using data from [Medicare](http://hospitalcompare.hhs.gov).
-I will be using Knitr `r citep(bib["knitr_man"])` for Rmarkdown compilation.
+Create a reproducable research article with Rmarkdown and share it.  
 
 __Methods__
-
+I will be using data from [Medicare](http://hospitalcompare.hhs.gov) which contains two datasets
+1. This table provides general Hospital information in response to a Hospital Compare search.
+2. The Outcome of Care Measures nationwide (USA).
+The codebook is provided and will be avalable as supplimentary file. 
+I will be using Knitr `r citep(bib["knitr_man"])` for Rmarkdown compilation.
 
 __Results__
 
@@ -158,12 +161,17 @@ __Conlutions__
 
 Introduction
 ------------
-This is how to cite in knitr with knitrcitations `r citep(bib["bentall_technique_1968"])`. 
 
 
 Material and methods
 ------------
 This is the first table __Table__ 1.
+
+
+
+
+Results
+------------
 See next Figure `r getNextFigureNo()`.
 
 
@@ -211,8 +219,20 @@ labs <- paste0(names(table(state.median)),"(",as.numeric(table(state.median)),")
 axis(side=1,at=1:length(levels(state.median)),lab=FALSE)
 text(1:length(levels(state.median)),par("usr")[3] - 1.5,srt=90, labels=labs, xpd=T, cex=0.7)
 ```
-<<<<<<< HEAD
+
 There is other image here Figure `r getPrevFigureNo()`.
-=======
-There is other image here Figure `r getNextFigureNo()`
->>>>>>> 2b9d7e1eba6b8350a4e20640eae4debc7e800ec0
+
+Discussion
+------------
+
+
+
+
+
+Supplimentary data
+------------
+Data files and codebooe are avalable [here](https://dl.dropboxusercontent.com/u/530192/public_data/DataMedicareMeasuresHospitals.zip).
+
+
+
+
