@@ -13,8 +13,13 @@
 body, td {
    font-family: sans-serif;
    background-color: white;
-   font-size: 12px;
-   margin: 8px;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  line-height: 20px;
 }
 
 tt, code, pre {
@@ -49,19 +54,21 @@ a:visited {
    color: rgb(50%, 0%, 50%);
 }
 
-pre {	
-   margin-top: 0;
-   max-width: 95%;
-   border: 1px solid #ccc;
-   white-space: pre-wrap;
+pre, img {
+  max-width: 100%;
 }
 
 pre code {
    display: block; padding: 0.5em;
 }
 
-code.r, code.cpp {
-   background-color: #F8F8F8;
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
 }
 
 table, td, th {
@@ -190,6 +197,13 @@ I will be using Knitr (<a href="http://yihui.name/knitr/">Andrew et al. 2013</a>
 <h2 style='margin: 10pt 0pt 0pt 0pt;'>Supplimentary files</h2>
 
 <p>Data files and codebooe are avalable <a href="https://dl.dropboxusercontent.com/u/530192/public_data/DataMedicareMeasuresHospitals.zip">here</a>.</p>
+
+<h2 style='margin: 10pt 0pt 0pt 0pt;'>References</h2>
+
+<ul>
+<li>Alastair Andrew, Alex Zvoleff, Brian Diggs, Cassio Pereira, Hadley Wickham, Heewon Jeon, Jeff Arnold, Jeremy Stephens, Jim Hester, Joe Cheng, Jonathan Keane, J.J. Allaire, Johan Toloe, Kohske Takahashi, Michel Kuhlmann, Nacho Caballero, Nick Salkowski, Noam Ross, Ramnath Vaidyanathan, Richard Cotton, Romain Francois, Sietse Brouwer, Simon Bernard, Taiyun Wei, Thibaut Lamadon, Tom Torsney-Weir, Trevor Davis, Weicheng Zhu, Wush Wu, Yihui Xie,  knitr: A general-purpose package for dynamic report
+  generation in R.  (2013)</li>
+</ul>
 
 </body>
 

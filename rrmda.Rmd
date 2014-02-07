@@ -252,5 +252,9 @@ Supplimentary files
 Data files and codebooe are avalable [here](https://dl.dropboxusercontent.com/u/530192/public_data/DataMedicareMeasuresHospitals.zip).
 
 
-
+References
+----------
+```{r ,results='asis',include=TRUE,eval=TRUE}
+bibliography("markdown", ordering = c("authors", "title","year", "journal"),bulleted = FALSE)
+```
 
