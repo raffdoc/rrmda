@@ -1,0 +1,1 @@
+Write script to see reasons of conversion, rate and indication hwo to avoid it.
