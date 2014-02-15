@@ -12,8 +12,8 @@ options(rstudio.markdownToHTML =
     # Now in this section we skip writing to the outputfile
     # and keep the markdown text in the md_txt variable
     md_txt <- markdownToHTML(inputFile, options = htmlOptions,
-                   stylesheet=ifelse(file.exists('custom.css'), 
-                                     'custom.css',
+                   stylesheet=ifelse(file.exists('rrmda.css'), 
+                                     'rrmda.css',
                                      getOption("markdown.HTML.stylesheet")))
     
     if (getOption("LibreOffice_adapt", "Yes") == "skip"){
@@ -35,7 +35,7 @@ options(rstudio.markdownToHTML =
   }
 )
 
-# I’ve  added some automated comments just as a reminder, remove
+# I?ve  added some automated comments just as a reminder, remove
 # the cat() if you want the .Rprofile to be quiet (note, the output does
 # not affect the knitr document)
 cat("\n * If you want knitr markdown png-files to be inside the document",
