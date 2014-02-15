@@ -10,4 +10,4 @@ rrmda.docx: rrmda.md
 	pandoc -s -S -V fontsize=12pt rrmda.md -o rrmda.docx
 	pandoc -s rrmda.html -o rrmda.docx
 clean:
-	@-rm -r *.md 
+	@-rm -r rrmda.md 
