@@ -4,22 +4,13 @@ opts_chunk$set(message = T, error = T, warning = T, comment = NA, fig.align = 'c
   		   dpi = 96, tidy = F, cache = F,echo=F,include=F, cache.path = '.cache/',
 			   fig.path = 'fig/',fig.height=5,fig.width=10, par(pch=19))
 
-options(xtable.type = 'html', width=68,digits=1, show.signif.stars=FALSE)
+options(xtable.type = 'html', width=68,digits=1, show.signif.stars=FALSE,
+       table_counter = TRUE, # Use the table counter that the htmlTable() provides
+       figure_counter = TRUE # Use the figure counter that we declare below
+       )
 
 # Evaluate the figure caption after the plot
 opts_knit$set(eval.after='fig.cap')
-
-# Avoid including base64_images - this only 
-# works with the .RProfile setup
-options(base64_images = "none")
-
-# Use the table counter that the htmlTable() provides
-options(table_counter = TRUE)
-
-# Use the figure counter that we declare below
-options(figure_counter = TRUE)
-# Use roman letters (I, II, III, etc) for figures
-#options(figure_counter_roman = TRUE)
 
 # Adding the next figure number
 getNextFigureNo <- function() as.character(as.numeric(options("figure_counter")))
