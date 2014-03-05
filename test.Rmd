@@ -1,0 +1,28 @@
+Title
+========================================================
+
+from site http://strengejacke.wordpress.com/2014/02/20/no-need-for-spss-beautiful-output-in-r-rstats/
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).
+
+
+When you click the **Knit HTML** button a web page will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r,echo=FALSE, results='hide',echo=FALSE}
+require(sjPlot) # load package
+# Fit "dummy" models. Note that both models share the same predictors
+# and only differ in their dependent variable
+data(efc)
+# recveive first item of COPE-index scale
+start <- which(colnames(efc)=="c82cop1")
+# recveive first item of COPE-index scale
+end <- which(colnames(efc)=="c90cop9")
+# retrieve variable and value labels
+varlabs <- sji.getVariableLabels(efc)
+vallabs <- sji.getValueLabels(efc)
+```
+And here is the table.
+`r sjt.stackfrq(efc[,c(start:end)],valuelabels=vallabs['c82cop1'],varlabels=varlabs[c(start:end)],alternateRowColors=TRUE, no.output=TRUE)$knitr`
+Knitr integration is here! Hurra!!!!!
+
+`r sjt.df(efc, no.output=TRUE)$knitr`
