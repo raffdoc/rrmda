@@ -112,6 +112,7 @@ library(RColorBrewer)
 library(rms) # I use the cox regression from this package
 library(boot) # The melanoma data set is used in this exampe
 library(Gmisc) # Stuff I find convenient
+library(Greg)
 trellis.par.set(theme=col.mosaic())  # get a better color scheme for lattice
 source("~/Dropbox/R_Scripts/glob_r_scr/print_pval.R")
 source("~/Dropbox/R_Scripts/glob_r_scr/median_range.R")
@@ -228,7 +229,27 @@ xlab="Number of Patients Seen",ylab="30-day Death Rate",
 main="Heart Attack 30-day Death Rate by Ownership")
 ```
 
+Table 1
+```{r C_and_A, results='asis',include=TRUE}
+# Setup needed for the rms coxph wrapper
+ddist <- datadist(melanoma)
+options(datadist = "ddist")
 
+# Do the cox regression model 
+# for melanoma specific death
+msurv <- Surv(melanoma$time_years, melanoma$status=="Melanoma death")
+fit <- cph(msurv ~ sex + age + ulcer + thickness, data=melanoma)
+
+# Print the model
+printCrudeAndAdjustedModel(fit, desc_digits=0,
+                           caption="Adjusted and unadjusted estimates for melanoma specific death.",
+                           desc_column=TRUE,
+                           add_references=TRUE, 
+                           ctable=TRUE)
+
+pvalues <- 
+  1 - pchisq(coef(fit)^2/diag(vcov(fit)), df=1)
+```
 
 
 Discussion
